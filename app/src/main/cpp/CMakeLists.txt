@@ -9,7 +9,9 @@ cmake_minimum_required(VERSION 3.4.1)
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
-
+include_directories("inc")
+file(GLOB_RECURSE NATIVE_SRCS "*.c" "*.cpp")
+file(GLOB_RECURSE NATIVE_HDRS "*.h" "*.hpp")
 add_library( # Sets the name of the library.
              native-lib
 
@@ -17,13 +19,14 @@ add_library( # Sets the name of the library.
              SHARED
 
              # Provides a relative path to your source file(s).
-             native-lib.cpp )
+             native-lib.cpp ${NATIVE_SRCS} ${NATIVE_HDRS})
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
 # default, you only need to specify the name of the public NDK library
 # you want to add. CMake verifies that the library exists before
 # completing its build.
+
 
 find_library( # Sets the name of the path variable.
               log-lib

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">NodeMCU智能遥控</string>
+    <string name="app_name">X控</string>
     <string name="menu_item_about">关于 App</string>
     <string name="about_app_version">App 版本: %s</string>
 
@@ -62,4 +62,13 @@
     <string name="device_action1">录入信息</string>
     <string name="device_action2">测试连接</string>
     <string name="device_action3">查看说明</string>
+    <string name="title_activity_login">登录</string>
+    <string name="prompt_email">用户名</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="welcome">"欢迎！"</string>
+    <string name="invalid_username">非法用户名</string>
+    <string name="invalid_password">密码超过5个字符</string>
+    <string name="login_failed">"登录失败"</string>
 </resources>
